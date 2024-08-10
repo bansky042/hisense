@@ -1,0 +1,294 @@
+*{
+    padding: auto;
+    margin: auto;
+}
+
+@media only screen and (min-width:320px) and (max-width:600px) {
+    .navbar{
+        width: 100% !important;
+        justify-content: space-between !important;
+        padding: 15px !important;
+
+    }
+   
+    .menu{
+        position: fixed !important;
+        right: 100% !important;
+        top: 60px !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        height: 100% !important;
+        transition: 0.3s;
+        text-align: center;
+        background-color:  rgb(32, 36, 66);
+        z-index: 1 !important;
+        
+    }
+    .menu.active{
+        right: 0 !important;
+    }
+    .hambuger{
+        display: block !important;
+        background-color:rgb(32, 36, 66);
+        border-radius: 5px !important;
+        border: none !important;
+        position: absolute;
+        right: 10px;
+
+    }
+    .hambuger span{
+        height: 1px !important;
+        width: 30px !important;
+        background-color: white;
+        transition: 0.3s;
+        margin-bottom: 5px !important;
+        border: none !important;
+        display: block !important;
+    }
+    .hambuger.active span:nth-child(2){
+        opacity: 0;
+    }
+    .hambuger.active span:nth-child(1){
+        -webkit-transform: translateY(12px) rotate(45deg);
+        transform: translateY(12px) rotate(45deg) ;
+    }
+    .hambuger.active span:nth-child(3){
+        -webkit-transform: translateY(1px) rotate(-45deg);
+        transform: translateY(1px) rotate(-45deg);
+    }   
+    .nav-link{
+        padding: 20px !important;
+        margin: 30px !important;
+    }
+    .nav-search{
+        position: absolute;
+        left: 20px;
+    }
+    .section1{
+        position: absolute;
+        top: 90px;
+        z-index: 0 !important;
+       
+    }
+    .carousel-caption h1 {
+        font-size: 25px;
+    }
+    .carousel-caption p{
+        font-size: 15px;
+    }
+}
+.navbar{
+    background-color: transparent;
+    color:black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.logo{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    color: rgb(37, 204, 157);
+    font-weight: 700;
+}
+.menu{
+   list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    
+}
+.nav-link{
+    padding: 8px;
+    text-decoration: none;    
+}
+.nav-link a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    padding: 10px;
+
+}
+.nav-link a:hover{
+    background-color:rgb(37, 204, 157);
+    color:rgb(32, 36, 66);
+    font-size: large;
+
+}
+.nav-search{
+    padding: 5px;
+    display: none;
+}
+.hambuger{
+    display: none;
+    height: 20px;
+    width: 30px;
+    background-color: transparent;
+    justify-content: space-evenly;
+}
+.hambuger span{
+    height: 1px;
+    width: 100%;
+}
+.menu2{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.nav-link2{
+    list-style-type: none;
+    padding: 10px;
+}
+.nav-link2 a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    transition: 0.3s;
+}
+.nav-link2 a:hover{
+    background-color: rgb(37, 204, 157);
+    color:rgb(32, 36, 66);
+    font-size: large;
+
+}
+/* section 1*/
+.section1{
+    height: auto;
+}
+
+.carousel-item{
+    transition: 0.5s;
+}
+.section2{
+    display: block;
+    position: relative;
+    width: 95%;
+    transition: 0.5s;
+    height: 700px;
+    overflow: hidden;
+    
+}
+/*.section20{
+    position: relative;
+    left: 35%;
+}*/
+.image1{
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+}
+.image1:hover {
+    transform: scale(1.2);
+    filter: brightness(0.7);
+}
+
+/* section 3*/
+.carousel {
+    position: relative;
+    width: 90%;
+    height: 500px; /* Set the height of the carousel */
+    margin-top: 20px;
+  }
+  
+  .carousel-inner2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item2 {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s ease-in-out;
+  }
+  
+  .carousel-item2.active {
+    display: block;
+  }
+  
+  .carousel-item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-control-prev2,
+  .carousel-control-next2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .carousel-control-prev2 {
+    left: 10px;
+  }
+  
+  .carousel-control-next2 {
+    right: 10px;
+  }
+  
+  .carousel-control-prev2:hover,
+  .carousel-control-next2:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin: 10px;
+    z-index: 1;
+  }
+  
+  .carousel-dot.active {
+    background-color: #ccc;
+  }
+ 
+
+  .carousel-dot2{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    margin: 10px;
+    z-index: 1;
+  }
+
+  .carousel-dot2.active {
+    background-color: #ccc;
+  }
+
+  .carousel-dot3{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    margin: 10px;
+    z-index: 1;
+  }
+
+  .carousel-dot3.active {
+    background-color: #ccc;
+  }
+
+
